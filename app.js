@@ -78,10 +78,18 @@ const sectionCenter = document.querySelector(".section-center");
 const filterBtns = document.querySelectorAll(".filter-btn")
 
 
-
+//  load item olanlar
 window.addEventListener("DOMContentLoaded", function () {
   displayMenuItems(menu);
 });
+
+//filtrelenen itemler
+
+filterBtns.forEach(function(btn) {
+  btn.addEventListener('click', function(e) {
+    console.log(e.currentTarget.dataset);
+  })
+})
 
 function displayMenuItems(menuItems) {
   let displayMenu = menuItems.map(function (item) {
